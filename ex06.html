@@ -6,31 +6,66 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>About Me</title>
     <style>
-        body{background-color: #333333;}
+        body{background-color: #333333;}/* 전체배경 */
         #wrap{
             width: 960px;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 0 auto;
         }
+        /* 배경 상자 */
         #art_l{
             width: 240px;
             background-color: #aaaaaa;
             height: 980px;
             float: left;
-            padding: 20px 40px 0px 40px;/* top부터 시계방향 */
+            padding: 20px 40px 0 40px;/* top부터 시계방향 */
         }
         #art_r{
             width: 560px;
-            background-color: #ffffff;
+            background-color: #eeeeee;
             height: 960px;
             float: right;
-            padding: 40px 60px 0px 20px;/* top부터 시계방향 */
+            padding: 40px 60px 0 20px;/* top부터 시계방향 */
         }
+        /* 여기까지 배경 상자 */
+        /* art_l 스타일 */
         img{
             width: 240px;
+            margin-bottom: 30px;
         }
         div{
             padding-left: 40px;
+        }
+        h1{font-size: 20px;
+        text-align: center;
+        margin-bottom: 30px;
+        cursor: pointer;
+        }
+        h1>span{font-size: 32px;}
+        #art_l>#dogdog{
+            color: #666666;
+            margin-bottom: 90px;
+        }
+        #art_l>p{margin-bottom: 30px;}
+        /* 여기까지 art_l */
+        /* art_r 스타일 */
+        hr{margin: 30px 0 20px 0px;}
+        #who_am_i{
+            padding-left: 20px;
+            line-height: 32px;
+        }
+        #who_am_i>strong{
+            font-weight: 500;
+            background-color:yellow;
+        }
+        a{/* 하이퍼링크 색상 및 줄 제거 */
+            color: skyblue;
+            text-decoration: none;
+        }
+        li{margin-bottom: 20px;}
+        ul>li>ul{margin-top: 16px;}
+        ul>li>ul>li{
+            font-size: 14px;
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -38,25 +73,28 @@
     <section id="wrap">
         <article id="art_l">
             <img src="./images/hotdog01.jpg" alt="목도리를 두른 불도그 사진">
-            <h1>Dogdog Kim</h1>
-            <p>똑똑한 김독독</p>
+            <h1><span>D</span>OGDOG <span>K</span>IM</h1>
+            <p id="dogdog">똑똑한 김독독</p>
+            <!-- ===여기까지 프로필=== -->
             <p>지구, 대한민국</p>
             <p>blahblah@naver.com</p>
             <h2>SNS</h2>
         </article>
+        <!-- ===여기까지 왼쪽면=== -->
         <article id="art_r">
             <div>
             <h2>Who am I?</h2>
-            <p>웹디자인과 웹퍼블리싱에 관심이 많습니다. 신림에서 공부 중</p>
+            <p id="who_am_i"><strong>웹디자인과 웹퍼블리싱에 관심이 많습니다.</strong> <br>신림에서 공부 중</p>
             </div>
+            <!-- 여기까지 윗면 -->
             <hr>
             <div>
             <h2>Experience</h2>
             <ul>
                 <li>웹디자인
                     <ul>
-                        <li>일러스트레이터</li>
-                        <li>포토샵</li>
+                        <li><a href="./ex07.html">포토샵</a></li>
+                        <li><a href="./ex08.html">일러스트레이터</a></li>
                     </ul>
                 </li>
                 <li>웹퍼블리싱
@@ -69,6 +107,7 @@
             </ul>
             </div>
             <hr>
+            <!-- ===표=== -->
             <div>
             <h2>Education</h2>
             <table>
@@ -92,10 +131,7 @@
                 </tr>
             </table>
             </div>
-            <hr>
-            <div>
-            4
-            </div>
+            <!-- ===여기까지 표=== --> 
         </article>
     </section>
 </body>
