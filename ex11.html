@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        input{display: none;}
+        input:checked + h2{transform: rotate(90deg);}
+        h2{transition: 0.5s;transform-origin: left bottom;}
+        /* h2{transform: rotate(90deg);transform-origin: left bottom;} */
+        #btn:hover + #item01{color: red;}
+        #btn:hover + #item01 + #item02{color: green;}
+    </style>
+</head>
+<body>
+    <div id="btn">마우스 올리세요</div>
+    <div id="item01">아이템01</div>
+    <div id="item02">아이템02</div>
+    <div id="item03">아이템03</div>
+   <label>
+       <input type="checkbox">
+       <h2>타이틀</h2>
+   </label>
+</body>
+</html>

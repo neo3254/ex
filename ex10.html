@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--[if lt IE8]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha512-UDJtJXfzfsiPPgnI5S1000FPLBHMhvzAMX15I+qG2E2OAzC9P1JzUwJOfnypXiOH7MRPaqzhPbBGDNNj7zBfoA==" crossorigin="anonymous"></script>
+    <![endif]-->
+    <title>멀티미디어</title>
+    <style>
+        video{width: 800px;transition: 1s;}
+        h1{margin-left: 200px; transition: 10s;}
+    </style>
+</head>
+<body>
+    <h1>멀티미디어</h1>
+    <picture>
+        <source media="(min-width:700px)" srcset="./images/hotdog01.psd" type="image/psd">
+        <source media="(min-width:460px)" srcset="./images/hotdog02.jpg" type="image/jpg">
+        <img src="./images/hotdog03.jpg" alt="핫도그">
+    </picture>
+
+    <input type="button" value="play" onclick="play();">
+    <input type="button" value="stop" onclick="stop();">
+    <input type="button" value="turn" onclick="videoWidth();">
+
+    <video autoplay>
+        <source src="./media/Puppy.mp4" type="video/mp4">
+    </video>
+
+    <script>
+        
+        play();
+        function play(){
+            document.querySelector('video').play();
+            document.querySelector('video').load();
+        }
+        function stop(){
+            document.querySelector('video').pause();
+        }
+        function videoWidth(){
+            document.querySelector('video').style.width='300px';
+            document.querySelector('video').style.opacity='0.5';
+            document.querySelector('h1').style.marginLeft='-200px';
+        }
+    </script>
+    
+</body>
+</html>
