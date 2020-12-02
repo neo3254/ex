@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가로배치</title>
+    <style>
+        .clearfix::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        #box{
+            width: 302px;
+            height: 102px;
+            border: 1px dotted black;
+        }
+        #box>div{
+            display: inline-block;
+        }
+        #box01,#box04,#box07{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        #box02,#box05,#box08{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+        #box03,#box06,#box09{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+        #box04,#box05,#box06{
+            width: 50px;
+            float: left;
+        }
+        #far_box{
+            width: 150px;
+            float: right;
+        }
+        #box07,#box08,#box09{
+            width: 50px;
+            float: left;
+        }
+        #box10{
+            float: left;
+            background-color: pink;
+        }
+        #box11{
+            float: right;
+            background-color: purple;
+        }
+        /* #box12{
+            clear: both;
+        } */
+        /* .clearfix{
+            clear: both;
+        } */
+        
+    </style>
+</head>
+<body>
+    <h2>가로배치1(인라인)</h2>
+        <div id="box">
+            <div id="box01">박스01</div><div id="box02">박스02</div><div id="box03">박스03</div>
+        </div>
+    <br><br>
+
+    <h2>가로배치2(float left)</h2>
+        <div id="box">
+            <div id="box04">박스04</div>
+            <div id="box05">박스05</div>
+            <div id="box06">박스06</div>
+        </div>
+    <br><br>
+
+    <h2>가로배치3(float right)</h2>
+        <div id="box">
+            <div id="par_box">
+                <div id="box07">박스07</div>
+                <div id="box08">박스08</div>
+                <div id="box09">박스09</div>
+            </div>
+        </div>
+    <br><br>
+
+    <h2>가로배치4(float right)</h2>
+        <div id="box">
+            
+            <div class="clearfix">
+                <div id="box10">박스10</div>
+                <div id="box11">박스11</div>
+            </div>
+                <div id="box12">박스12</div>
+        </div>
+</body>
+</html>
